@@ -1,49 +1,66 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(130deg, rgba(0, 10, 53, 1) 25%, rgba(32, 0, 77, 1) 90%);
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 header {
     width: 100%;
-    position: fixed;
 }
 
 .navbar {
-    margin-right: rem;
-    position: absolute;
-    right: 0;
+    box-sizing: border-box;
+    padding: 0px 3rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #AED2FF;
+    font-size: 14px;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: right;
     list-style-type: none;
 }
 
 .navbar a {
-    padding-left: 20px;
+    font-size: 18px;
+    padding-right: 20px;
     color: #D9D9D9;
     text-decoration: none;
-    font-size: 1.2rem;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar a:hover {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 21px;
 }
 
+/* home */
 
-.home {
+.home,
+.about,
+.project {
     box-sizing: border-box;
     max-height: 100%;
     height: 100vh;
     overflow: hidden;
-    background: rgb(0, 10, 53);
-    background: linear-gradient(130deg, rgba(0, 10, 53, 1) 36%, rgba(32, 0, 77, 1) 90%);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -51,27 +68,31 @@ header {
     padding-top: 3rem;
 }
 
-.description {
+.home .description {
     line-height: 1px;
 }
 
-.description h1 {
+.home .description h1 {
     color: #AED2FF;
     font-size: 1.3rem;
+    position: relative;
+    top: 10px;
 }
 
-.description h2 {
+.home .description h2 {
     font-family: 'Roboto Condensed', sans-serif;
     color: #D9D9D9;
     font-size: 5rem;
 }
 
-.description h3 {
+.home .description h3 {
+    position: relative;
+    bottom: 15px;
     color: rgba(174, 210, 255, 0.53);
 }
 
-.description button {
-    padding: 5px 18px;
+.home .description button {
+    padding: 7px 18px;
     font-size: 22px;
     font-weight: 700;
     font-family: 'Roboto Mono', monospace;
@@ -82,7 +103,7 @@ header {
     transition: all 0.3s ease-in;
 }
 
-.description button:hover {
+.home .description button:hover {
     background-color: transparent;
     border: 2px solid white;
     color: white;
@@ -96,4 +117,173 @@ header {
 .image img {
     width: 500px;
     height: 500px;
+}
+
+/* about */
+.about {
+    align-items: start;
+}
+
+.container {
+    height: 175vh;
+    width: 65%;
+    background: rgba(174, 210, 255, 0.2);
+    border-radius: 15px;
+    border: 5px solid #D9D9D9;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.about h2,
+.project h2 {
+    font-size: 32px;
+    color: #D9D9D9;
+}
+
+.about span,
+.project span {
+    color: #AED2FF;
+}
+
+.container .profile {
+    margin-top: 30px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.profile .image {
+    width: 280px;
+    height: 280px;
+    background-color: #AED2FF;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.profile .image img {
+    border-radius: 50%;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: cover;
+}
+
+.profile .profile-description,
+.project .content p {
+    padding: 20px 8%;
+    color: #AED2FF;
+}
+
+.profile .profile-description p,
+.project .content p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* contact */
+.project {
+    z-index: -999;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.project .content {
+    width: min-content;
+}
+
+.project .content a {
+    text-decoration: underline;
+    color: #AED2FF;
+}
+
+.project .content a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.project .content img {
+    height: 280px;
+}
+
+footer {
+    border-top: 5px solid #D9D9D9;
+    background-color: #160035;
+    height: max-content;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer i {
+    color: #D9D9D9;
+    font-size: 30px;
+    margin-inline: 8px;
+}
+
+footer i:hover {
+    color: white;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+
+
+/* media query */
+@media screen and (max-width : 900px) {
+    .home img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .navbar {
+        position: absolute;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .home .description {
+        text-align: center;
+    }
+
+    .home .image {
+        display: none;
+    }
+
+    .profile .image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile .profile-description p,
+    .project .content p {
+        font-size: 16px;
+    }
+
+    .project .content img {
+        height: 200px;
+    }
 }

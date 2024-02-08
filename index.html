@@ -18,22 +18,29 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono:wght@400;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <div class="logo">
+                <h1>MyPortfolio.</h1>
+            </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
             </ul>
+        </nav>
     </header>
-    </nav>
 
     <main>
-        <section class="home">
-
-            <div class="description">
+        <section class="home" id="home">
+            <article class="description">
                 <h1>Hi, My name is</h1>
 
                 <h2>Humam Afif</h2>
@@ -41,15 +48,51 @@
 
                 <h3>Web & Mobile Anthusiast</h3>
 
-                <button type="submit">About Me</button>
-            </div>
+                <a href="https://www.instagram.com/humamafif_1606/"><button type="submit">Follow Me</button></a>
+            </article>
 
-            <div class="image">
+            <aside class="image">
                 <img src="./assets/images/image.png" alt="">
+            </aside>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About <span>Me</span></h2>
+                <div class="profile">
+                    <aside class="image">
+                        <img src="./assets/images/foto.JPG" alt="foto">
+                    </aside>
+                    <article class="profile-description">
+                        <p>I am an Informatics Engineering student at UIN Maulana Malik Ibrahim Malang. I like study
+                            about Web and Mobile. I have interest in web and mobile development. Programming languages
+                            that I learned were Java, Dart, html, Javascript and css. The framework that I usually use
+                            is Flutter.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project" id="project">
+            <h2>My <span>Project</span></h2>
+            <div class="content">
+                <img src="./assets/images/github-mark-white.png" alt="logo GitHub">
+                <p>
+                    You can see on my <a href="https://github.com">GitHub</a>
+                </p>
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="container-footer">
+            <div class="icon">
+                <a href="https://www.instagram.com/humamafif_1606/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&COPY;February 2024</p>
+        </div>
+    </footer>
 </body>
 
 </html>
