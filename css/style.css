@@ -264,6 +264,14 @@ footer p {
         font-size: 10px;
     }
 
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .navbar a:hover {
+        font-size: 14px;
+    }
+
     .home {
         flex-direction: column;
         justify-content: center;
@@ -294,5 +302,24 @@ footer p {
 
     .container {
         width: 80%;
+    }
+}
+
+@media screen and (max-width : 560px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar .logo {
+        display: none;
+    }
+
+    .home .description h2 {
+        font-size: 3.5rem;
+    }
+
+    .home .description button {
+        font-size: 16px;
     }
 }
