@@ -255,8 +255,13 @@ footer p {
 }
 
 @media screen and (max-width : 768px) {
+
     .navbar {
         position: absolute;
+    }
+
+    .navbar .logo {
+        font-size: 10px;
     }
 
     .home {
