@@ -8,11 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+Dockerfile
+.dockerignore
 dist
 dist-ssr
 *.local
-Dockerfile
-.dockerignore
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
