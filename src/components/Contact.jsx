@@ -31,14 +31,12 @@ export const Contact = () => {
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
-        console.log('Email berhasil dikirim:', result.text);
         setSubmitStatus('success');
         setIsSubmitting(false);
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => setSubmitStatus(null), 3000);
       })
       .catch((error) => {
-        console.error('Pengiriman email gagal:', error.text);
         setSubmitStatus('error');
         setIsSubmitting(false);
         setTimeout(() => setSubmitStatus(null), 3000);
