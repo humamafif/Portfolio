@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ export const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const form = useRef();
   
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,16 +24,25 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1500);
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then((result) => {
+        console.log('Email berhasil dikirim:', result.text);
+        setSubmitStatus('success');
+        setIsSubmitting(false);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitStatus(null), 3000);
+      })
+      .catch((error) => {
+        console.error('Pengiriman email gagal:', error.text);
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        setTimeout(() => setSubmitStatus(null), 3000);
+      });
   };
 
   return (
@@ -38,7 +50,6 @@ export const Contact = () => {
       <h2 className="my-20 text-center text-4xl">Get in Touch</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Info */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -81,14 +92,12 @@ export const Contact = () => {
             <p className="text-gray-400 italic">"I'd love to hear about your project ideas or any opportunities for collaboration. Let's create something amazing together!"</p>
           </div>
         </motion.div>
-        
-        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
@@ -153,6 +162,9 @@ export const Contact = () => {
             
             {submitStatus === 'success' && (
               <p className="text-green-400 mt-2">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="text-red-400 mt-2">Failed to send message. Please try again.</p>
             )}
           </form>
         </motion.div>
