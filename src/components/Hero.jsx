@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profilePic from '../assets/Profile.png';
+import profilePic from '../assets/Profile.webp';
 
 const container = (delay) => ({
     hidden: { x: -100, opacity: 0 },
@@ -74,11 +74,15 @@ export const Hero = () => {
                             className="relative"
                         >
                             {/* Enhanced glow effect */}
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-blue-500 to-pink-600 rounded-full blur-xl opacity-50 animate-pulse"></div>
-                            <img 
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-blue-500 to-pink-600 rounded-2xl -rotate-3 blur-xl opacity-50 animate-pulse"></div>
+                            <motion.img 
                                 src={profilePic} 
                                 alt="Humam Afif" 
-                                className='rounded-full shadow-2xl relative z-10 border-2 border-purple-500/20 max-w-full h-auto' 
+                                initial={{ rotate: 6 }}
+                                animate={{ rotate: 2 }}
+                                whileHover={{ rotate: 0}}
+                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                className='rounded-2xl shadow-2xl relative z-10 border-2 border-purple-500/20 max-w-full h-auto' 
                             />
                         </motion.div>
                     </div>

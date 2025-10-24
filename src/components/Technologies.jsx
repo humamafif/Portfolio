@@ -1,58 +1,67 @@
-import { motion } from "framer-motion";
-import { RiReactjsFill } from "react-icons/ri";
-import { RiFlutterFill } from "react-icons/ri";
-import { SiExpress, SiPrisma } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
+import { motion, useReducedMotion } from "framer-motion";
+import { RiFlutterFill, RiReactjsFill } from "react-icons/ri";
+import {
+  SiExpress,
+  SiLaravel,
+  SiTailwindcss,
+  SiMysql,
+  SiFirebase,
+  SiSupabase,
+} from "react-icons/si";
 
-const iconVariants = (duration) => ({
-    hidden: { y: -10, opacity: 0 },
-    animate: {
-        y: [10, -10],
-        transition: {
-            duration: duration,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
+const DURATION = 5.0;
+const AMPLITUDE = 12;
+
+const iconVariants = (dir, prefersReduced) => ({
+  initial: { y: 0 },
+  animate: {
+    y: prefersReduced
+      ? 0
+      : dir === "up"
+      ? [0, -AMPLITUDE, 0, AMPLITUDE, 0]
+      : [0, AMPLITUDE, 0, -AMPLITUDE, 0],
+    transition: prefersReduced
+      ? { duration: 0.3 }
+      : {
+          duration: DURATION,
+          ease: "linear",
+          repeat: Infinity,
         },
-    },
+  },
 });
 
 export const Technologies = () => {
-    return (
-        <div className="border-b border-neutral-800 pb-24">
-            <h1 className="my-20 text-center text-4xl">Technologies</h1>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-                <motion.div
-                    variants={iconVariants(Math.random() * (3 - 2) + 2)}
-                    initial="initial"
-                    animate="animate"
+  const prefersReduced = useReducedMotion();
+  const ICONS = [
+    { el: RiFlutterFill, className: "text-sky-500" },
+    { el: RiReactjsFill, className: "text-cyan-400" },
+    { el: SiExpress, className: "text-white" },
+    { el: SiLaravel, className: "text-red-500" },
+    { el: SiTailwindcss, className: "text-sky-400" },
+    { el: SiMysql, className: "text-amber-500" },
+    { el: SiFirebase, className: "text-yellow-400" },
+    { el: SiSupabase, className: "text-green-500" },
+  ];
 
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <RiFlutterFill className="text-7xl text-sky-700"></RiFlutterFill>
-                </motion.div>
-                <motion.div
-                    variants={iconVariants(Math.random() * (2 - 1) + 1)}
-                    initial="initial"
-                    animate="animate"
-                    className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <SiExpress className="text-7xl text-white"></SiExpress>
-                </motion.div>
-                <motion.div variants={iconVariants(Math.random() * (3 - 2) + 2)}
-                    initial="initial"
-                    animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <RiReactjsFill className="text-7xl text-cyan-500"></RiReactjsFill>
-                </motion.div>
-                <motion.div variants={iconVariants(Math.random() * (2 - 1) + 1)}
-                    initial="initial"
-                    animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <SiMysql className="text-7xl text-amber-600"></SiMysql>
-                </motion.div>
-                <motion.div variants={iconVariants(Math.random() * (3 - 2) + 2)}
-                    initial="initial"
-                    animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <SiPrisma className="text-7xl text-white" ></SiPrisma>
-                </motion.div>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="border-b border-neutral-800 pb-24 mx-auto flex-col flex">
+      <h1 className="my-20 text-center text-4xl">Technologies</h1>
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {ICONS.map(({ el: Icon, className }, idx) => {
+          const dir = idx % 2 === 0 ? "up" : "down"; // genap: up, ganjil: down
+          return (
+            <motion.div
+              key={idx}
+              variants={iconVariants(dir, prefersReduced)}
+              initial="initial"
+              animate="animate"
+              className="rounded-2xl border-4 border-neutral-800 p-4"
+            >
+              <Icon className={`text-7xl ${className}`} />
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};

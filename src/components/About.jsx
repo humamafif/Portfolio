@@ -1,33 +1,88 @@
-import { motion } from 'framer-motion';
-import aboutImage from '../assets/About.jpg';
+import { motion } from "framer-motion";
+import { FaDownload } from "react-icons/fa";
 
 export const About = () => {
-    return (
-        <div className="border-b border-neutral-900 py-1 h-screen">
-            <h2 className="my-20 text-center text-4xl">About
-            </h2>
-            <div className="flex flex-wrap">
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
-                    className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex items-center justify-center">
-                        <img src={aboutImage} alt="" className='rounded-2xl shadow-2xl' />
-                    </div>
-                </motion.div>
-                <div className='w-full lg:w-1/2'>
-                    <motion.div
-                        whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: 100 }}
-                        transition={{ duration: 1 }}
-                        className='flex justify-center lg:justify-start' >
-                        <p className='my-2 max-w-xl py-6'>
-                            Hello! I am a dedicated Informatics Engineering student at UIN Malang, passionate about the world of Web and Mobile Development. My journey in tech has been shaped by a curiosity for innovative solutions and a commitment to creating intuitive digital experiences. With each project, I strive to merge functionality and creativity, ensuring that every digital product I develop meets both user needs and high standards of quality. Outside of coding, I am always eager to learn and explore new trends in technology.
-                        </p>
-                    </motion.div>
-                </div>
+  const photoTransition = {
+    type: "spring",
+    stiffness: 90,
+    damping: 18,
+    mass: 0.6,
+  };
+  const textTransition = {
+    type: "spring",
+    stiffness: 90,
+    damping: 18,
+    mass: 0.6,
+  };
+
+  return (
+    <section
+      id="about"
+      className="relative py-24 border-b border-neutral-900 w-full overflow-visible" // <- jangan hidden
+    >
+      <h2 className="mb-12 text-center text-4xl">About</h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Photo */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={photoTransition}
+          viewport={{ once: true, amount: 0.4 }} // mulai sedikit lebih awal
+          className="relative transform-gpu" // render halus
+          style={{ willChange: "transform" }}
+        >
+          <div className="rounded-2xl overflow-hidden bg-transparent">
+            <div
+              className="h-[420px] w-full animate-rotate-border"
+              style={{
+                background:
+                  "conic-gradient(from var(--border-angle), transparent 0deg, #9333EA 120deg, transparent 240deg)",
+              }}
+            >
+              <img
+                src="src/assets/About1.webp"
+                alt="Humam Afif teaching / presenting"
+                className="w-full h-[420px] rounded-2xl object-cover p-2"
+              />
             </div>
-        </div>
-    )
-}
+          </div>
+
+          <div className="absolute -bottom-5 left-6 shadow-lg">
+            <a
+              href="/Humam-Afif-CV.pdf"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2.5 text-white shadow-lg hover:from-purple-700 hover:to-blue-700 transition-colors"
+            >
+              <FaDownload className="animate-bounce" /> Download CV
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={textTransition}
+          viewport={{ once: true, amount: 0.4 }}
+          className="space-y-6 transform-gpu"
+          style={{ willChange: "transform" }}
+        >
+          <p className="text-lg text-gray-200 font-light text-start">
+            I am an Informatics Engineering student at UIN Malang with a strong
+            focus on Web and Mobile Development, specializing in Flutter and
+            React. I combine technical expertise with a user-focused mindset to
+            build digital products that are not only functional but also deliver
+            a seamless experience. My portfolio includes mobile apps, web
+            platforms, and internal systems, where I have contributed in areas
+            such as UI/UX implementation and performance optimization. I excel
+            in collaborating with cross-functional teams, translating business
+            needs into scalable solutions, and delivering projects with high
+            attention to detail. I am passionate about continuous learning and
+            staying updated with emerging technologies, ensuring that every
+            solution I create is relevant, efficient, and impactful.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};

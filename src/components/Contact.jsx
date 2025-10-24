@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import {FaEnvelope } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 
@@ -52,29 +52,10 @@ export const Contact = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          animate={{ opacity: 1, x: 0 }}
           className="space-y-8"
         >
           <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-          
-          <div className="flex items-start space-x-4">
-            <div className="bg-purple-600/20 p-3 rounded-xl">
-              <FaMapMarkerAlt className="text-purple-400 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-white">Location:</h4>
-              <p className="text-gray-300">Desa Pernajuh, Kec. Socah, Kab. Bangkalan</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-4">
-            <div className="bg-purple-600/20 p-3 rounded-xl">
-              <FaPhone className="text-purple-400 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-white">Phone:</h4>
-              <p className="text-gray-300">082337134591</p>
-            </div>
-          </div>
           
           <div className="flex items-start space-x-4">
             <div className="bg-purple-600/20 p-3 rounded-xl">
@@ -94,6 +75,7 @@ export const Contact = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          animate={{ opacity: 1, x: 0 }}
         >
           <form ref={form} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
