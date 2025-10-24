@@ -1,3 +1,15 @@
+import MaupergiImg from "../assets/mobile/maupergi.webp";
+import SurveyImg from "../assets/mobile/survey.webp";
+import ShowroomImg from "../assets/mobile/showroom.webp";
+import MoviesImg from "../assets/mobile/movies.webp";
+import CariJasaImg from "../assets/web/cari_jasa.webp";
+import MayarCloneImg from "../assets/web/mayar_clone.webp";
+import NgadiresoImg from "../assets/web/ngadireso.webp";
+import ManbaulImg from "../assets/web/manbaul_maarif.webp";
+import KoperasiImg from "../assets/web/koperasi.webp";
+import PrettierImg from "../assets/other/prettier.webp";
+import ThemeImg from "../assets/other/theme.webp";
+
 export const ProjectsData = {
   categories: ["Mobile", "Web", "CLI", "Extension"],
   projects: [
@@ -14,7 +26,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "",
-      image: "src/assets/mobile/maupergi.webp",
+      image: MaupergiImg,
     },
     {
       title: "IT Feedback",
@@ -26,7 +38,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/survey-app-flutter.git",
-      image: "src/assets/mobile/survey.webp",
+      image: SurveyImg,
     },
     {
       title: "Car Showroom",
@@ -39,7 +51,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/showroom-app.git",
-      image: "src/assets/mobile/showroom.webp",
+      image: ShowroomImg,
     },
     {
       title: "Movies App",
@@ -50,7 +62,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/tmdb-simple-movie-app.git",
-      image: "src/assets/mobile/movies.webp",
+      image: MoviesImg,
     },
     {
       title: "Cari Jasa",
@@ -63,7 +75,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "",
-      image: "src/assets/web/cari_jasa.webp",
+      image: CariJasaImg,
     },
     {
       title: "Mayar Clone",
@@ -77,7 +89,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/mayar-clone.git",
-      image: "src/assets/web/mayar_clone.webp",
+      image: MayarCloneImg,
     },
     {
       title: "Desa Ngadireso",
@@ -89,7 +101,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/landingpage-desa-ngadireso.git",
-      image: "src/assets/web/ngadireso.webp",
+      image: NgadiresoImg,
     },
     {
       title: "MA Manba'ul Ma'arif",
@@ -103,7 +115,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "",
-      image: "src/assets/web/manbaul_maarif.webp",
+      image: ManbaulImg,
     },
     {
       title: "KoperasiKita",
@@ -117,7 +129,7 @@ export const ProjectsData = {
       ],
       link: "",
       repo: "https://github.com/humamafif/koperasi_kita.git",
-      image: "src/assets/web/koperasi.webp",
+      image: KoperasiImg,
     },
     {
       title: "Prettier Config",
@@ -129,7 +141,7 @@ export const ProjectsData = {
       ],
       link: "https://www.npmjs.com/package/create-prettier-config",
       repo: "https://github.com/humamafif/create-prettier-config.git",
-      image: "src/assets/other/prettier.webp",
+      image: PrettierImg,
     },
     {
       title: "VS Code Theme",
@@ -141,7 +153,7 @@ export const ProjectsData = {
       ],
       link: "https://marketplace.visualstudio.com/items?itemName=humamafif.github-theme-by-humamafif",
       repo: "https://github.com/humamafif/my-github-theme.git",
-      image: "src/assets/other/theme.webp",
+      image: ThemeImg,
     },
   ],
 };

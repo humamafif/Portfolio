@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
+import AboutImage from "../assets/About1.webp";
 
 export const About = () => {
   const photoTransition = {
@@ -41,7 +42,7 @@ export const About = () => {
               }}
             >
               <img
-                src="src/assets/About1.webp"
+                src={AboutImage}
                 alt="Humam Afif teaching / presenting"
                 className="w-full h-[420px] rounded-2xl object-cover p-2"
               />
