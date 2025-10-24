@@ -51,10 +51,12 @@ export const About = () => {
 
           <div className="absolute -bottom-5 left-6 shadow-lg">
             <a
-              href="/Humam-Afif-CV.pdf"
+              href="/humamafif-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2.5 text-white shadow-lg hover:from-purple-700 hover:to-blue-700 transition-colors"
             >
-              <FaDownload className="animate-bounce" /> Download CV
+              <FaDownload className="animate-bounce" /> My Resume
             </a>
           </div>
         </motion.div>
