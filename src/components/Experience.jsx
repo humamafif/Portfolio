@@ -23,9 +23,9 @@ export const Experience = () => {
     <div className="border-b border-neutral-900 pb-24 flex flex-col">
       <h2 className="my-20 text-center text-4xl">Experience</h2>
 
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {/* Timeline line */}
-        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-blue-500" />
+        <div className="absolute left-2 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-blue-500" />
 
         <div className="space-y-12">
           {displayedExperiences.map((exp, index) => (
@@ -38,10 +38,10 @@ export const Experience = () => {
               className="relative flex flex-col"
             >
               {/* Timeline dot */}
-              <div className="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#13131f] z-10" />
+              <div className="absolute left-2 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#13131f] z-10" />
 
               {/* Card */}
-              <div className="ml-16 bg-[#13131f] border border-gray-800 hover:border-purple-500/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-purple-900/10 w-full">
+              <div className="ml-6 md:ml-16 bg-[#13131f] border border-gray-800 hover:border-purple-500/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-purple-900/10">
                 <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                   <h3 className="text-xl font-extrabold text-white">
                     {exp.title}
