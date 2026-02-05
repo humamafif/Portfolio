@@ -4,7 +4,6 @@ import { About } from "./components/About";
 import { Technologies } from "./components/Technologies";
 import { Projects } from "./components/Projects";
 import { Experience } from "./components/Experience";
-import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
 export const App = () => {
@@ -34,9 +33,9 @@ export const App = () => {
           <section id="experience">
             <Experience />
           </section>
-          <section id="contact">
+          {/* <section id="contact">
             <Contact />
-          </section>
+          </section> */}
         </main>
         <Footer />
       </div>

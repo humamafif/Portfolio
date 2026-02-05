@@ -7,6 +7,8 @@ import {
   SiMysql,
   SiFirebase,
   SiSupabase,
+  SiNextdotjs,
+  SiExpo,
 } from "react-icons/si";
 
 const DURATION = 5.0;
@@ -18,8 +20,8 @@ const iconVariants = (dir, prefersReduced) => ({
     y: prefersReduced
       ? 0
       : dir === "up"
-      ? [0, -AMPLITUDE, 0, AMPLITUDE, 0]
-      : [0, AMPLITUDE, 0, -AMPLITUDE, 0],
+        ? [0, -AMPLITUDE, 0, AMPLITUDE, 0]
+        : [0, AMPLITUDE, 0, -AMPLITUDE, 0],
     transition: prefersReduced
       ? { duration: 0.3 }
       : {
@@ -35,7 +37,9 @@ export const Technologies = () => {
   const ICONS = [
     { el: RiFlutterFill, className: "text-sky-500" },
     { el: RiReactjsFill, className: "text-cyan-400" },
+    { el: SiExpo, className: "text-white" },
     { el: SiExpress, className: "text-white" },
+    { el: SiNextdotjs, className: "text-white" },
     { el: SiLaravel, className: "text-red-500" },
     { el: SiTailwindcss, className: "text-sky-400" },
     { el: SiMysql, className: "text-amber-500" },
@@ -46,7 +50,7 @@ export const Technologies = () => {
   return (
     <div className="border-b border-neutral-800 pb-24 mx-auto flex-col flex">
       <h1 className="my-20 text-center text-4xl">Technologies</h1>
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap max-w-4xl items-center justify-center gap-4 mx-auto">
         {ICONS.map(({ el: Icon, className }, idx) => {
           const dir = idx % 2 === 0 ? "up" : "down"; // genap: up, ganjil: down
           return (
@@ -55,9 +59,9 @@ export const Technologies = () => {
               variants={iconVariants(dir, prefersReduced)}
               initial="initial"
               animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
+              className="rounded-2xl border-4 border-neutral-800 md:p-4 p-2 my-2"
             >
-              <Icon className={`text-7xl ${className}`} />
+              <Icon className={`md:text-7xl text-4xl ${className}`} />
             </motion.div>
           );
         })}

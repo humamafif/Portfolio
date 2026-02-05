@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -54,7 +54,7 @@ export const Navbar = () => {
                     <button onClick={() => scrollToSection('technologies')} className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm font-medium">Technologies</button>
                     <button onClick={() => scrollToSection('projects')} className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm font-medium">Projects</button>
                     <button onClick={() => scrollToSection('experience')} className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm font-medium">Experience</button>
-                    <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm font-medium">Contact</button>
+                    {/* <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-purple-400 transition-colors cursor-pointer text-sm font-medium">Contact</button> */}
                 </div>
 
                 {/* Social Icons */}
@@ -67,6 +67,9 @@ export const Navbar = () => {
                     </a>
                     <a href="https://instagram.com/humamafif__" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors">
                         <FaInstagram />
+                    </a>
+                    <a href="mailto:afifalmahbubi04@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition-colors">
+                        <FaEnvelope />
                     </a>
                 </div>
 
@@ -97,9 +100,8 @@ export const Navbar = () => {
                         <button onClick={() => scrollToSection('about')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">About</button>
                         <button onClick={() => scrollToSection('technologies')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">Technologies</button>
                         <button onClick={() => scrollToSection('projects')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">Projects</button>
-                        <button onClick={() => scrollToSection('github-activity')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">GitHub Activity</button>
                         <button onClick={() => scrollToSection('experience')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">Experience</button>
-                        <button onClick={() => scrollToSection('contact')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">Contact</button>
+                        {/* <button onClick={() => scrollToSection('contact')} className="text-left py-2 text-gray-300 hover:text-purple-400 transition-colors">Contact</button> */}
                         {/* ...existing social icons... */}
 
                         <div className="flex items-center gap-4 pt-2 text-xl text-white">

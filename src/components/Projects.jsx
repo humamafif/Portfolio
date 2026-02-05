@@ -16,8 +16,8 @@ export const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
   const preferredTop3 = useMemo(
-    () => ["IT Feedback", "Desa Ngadireso", "VS Code Theme"],
-    []
+    () => ["IT Feedback", "MA Manba'ul Ma'arif", "VS Code Theme"],
+    [],
   );
 
   useEffect(() => {

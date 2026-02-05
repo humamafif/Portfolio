@@ -70,19 +70,11 @@ export const About = () => {
           className="space-y-6 transform-gpu"
           style={{ willChange: "transform" }}
         >
-          <p className="text-lg text-gray-200 font-light text-start">
-            I am an Informatics Engineering student at UIN Malang with a strong
-            focus on Web and Mobile Development, specializing in Flutter and
-            React. I combine technical expertise with a user-focused mindset to
-            build digital products that are not only functional but also deliver
-            a seamless experience. My portfolio includes mobile apps, web
-            platforms, and internal systems, where I have contributed in areas
-            such as UI/UX implementation and performance optimization. I excel
-            in collaborating with cross-functional teams, translating business
-            needs into scalable solutions, and delivering projects with high
-            attention to detail. I am passionate about continuous learning and
-            staying updated with emerging technologies, ensuring that every
-            solution I create is relevant, efficient, and impactful.
+          <p className="text-lg md:text-xl text-gray-200 font-light text-start">
+            I’m a web and mobile developer who builds responsive, user-focused
+            applications with modern technologies. I enjoy turning ideas into
+            polished digital products, with a strong emphasis on clean code,
+            performance, and maintainability.
           </p>
         </motion.div>
       </div>
