@@ -194,13 +194,14 @@ export const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+            style={{ scrollbarWidth: "none" }}
             onClick={closeProjectDetails}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-b from-[#0d0d18] to-[#0a0a14] rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-purple-500/30 shadow-2xl"
+              className="custom-scrollbar bg-gradient-to-b from-[#0d0d18] to-[#0a0a14] rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-purple-500/30 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* header */}

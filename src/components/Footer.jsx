@@ -11,7 +11,7 @@ export const Footer = () => {
             <h2 className="text-2xl font-bold text-white">Humam Afif</h2>
             <p className="text-gray-400 mt-2">Web & Mobile Enthusiast</p>
           </div>
-            <a href="mailto:afifalmahbubi044@gmail.com" className="text-gray-400 hover:text-white transition-colors">afifalmahbubi044@gmail.com</a>
+            <a href="mailto:afifalmahbubi04@gmail.com" className="text-gray-400 hover:text-white transition-colors">afifalmahbubi04@gmail.com</a>
           
           <div className="flex space-x-6 text-xl">
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">

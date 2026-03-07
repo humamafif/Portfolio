@@ -9,10 +9,35 @@ import ManbaulImg from "../assets/web/manbaul_maarif.webp";
 import KoperasiImg from "../assets/web/koperasi.webp";
 import PrettierImg from "../assets/other/prettier.webp";
 import ThemeImg from "../assets/other/theme.webp";
+import MathPuzzleImg from "../assets/mobile/mathgame.webp";
 
 export const ProjectsData = {
   categories: ["Mobile", "Web", "CLI", "Extension"],
   projects: [
+    {
+      title: "IT Feedback",
+      tech_stack: ["Flutter", "BLoC", "Firebase"],
+      category: "Mobile",
+      description: [
+        "Built feedback/survey flow with BLoC for predictable state management.",
+        "Integrated Firebase Auth (only student Accounts) for user authentication.",
+      ],
+      link: "",
+      repo: "https://github.com/humamafif/survey-app-flutter.git",
+      image: SurveyImg,
+    },
+    {
+      title: "Math Puzzle",
+      tech_stack: ["Flutter", "GetX", "Flame"],
+      category: "Mobile",
+      description: [
+        "Developed math puzzle game with Flutter and Flame.",
+        "Implemented leveling, game logic, and UI for children.",
+      ],
+      link: "",
+      repo: "https://github.com/humamafif/mathpuzzle",
+      image: MathPuzzleImg,
+    },
     {
       title: "Maupergi",
       type: "internship",
@@ -27,18 +52,6 @@ export const ProjectsData = {
       link: "",
       repo: "",
       image: MaupergiImg,
-    },
-    {
-      title: "IT Feedback",
-      tech_stack: ["Flutter", "BLoC", "Firebase"],
-      category: "Mobile",
-      description: [
-        "Built feedback/survey flow with BLoC for predictable state management.",
-        "Integrated Firebase Auth (only student Accounts) for user authentication.",
-      ],
-      link: "",
-      repo: "https://github.com/humamafif/survey-app-flutter.git",
-      image: SurveyImg,
     },
     {
       title: "Car Showroom",
@@ -64,7 +77,19 @@ export const ProjectsData = {
       repo: "https://github.com/humamafif/tmdb-simple-movie-app.git",
       image: MoviesImg,
     },
-      {
+    {
+      title: "Desa Ngadireso",
+      tech_stack: ["React", "Tailwind"],
+      category: "Web",
+      description: [
+        "Informational landing page for village profile and services.",
+        "Optimized layout, typography, and accessibility for content-heavy pages.",
+      ],
+      link: "https://www.ngadireso.afifalmahbubi.my.id",
+      repo: "https://github.com/humamafif/landingpage-desa-ngadireso.git",
+      image: NgadiresoImg,
+    },
+    {
       title: "MA Manba'ul Ma'arif",
       tech_stack: ["Laravel", "React", "Tailwind"],
       type: "freelance",
@@ -78,18 +103,7 @@ export const ProjectsData = {
       repo: "",
       image: ManbaulImg,
     },
-    {
-      title: "Desa Ngadireso",
-      tech_stack: ["React", "Tailwind"],
-      category: "Web",
-      description: [
-        "Informational landing page for village profile and services.",
-        "Optimized layout, typography, and accessibility for content-heavy pages.",
-      ],
-      link: "https://www.ngadireso.afifalmahbubi.my.id",
-      repo: "https://github.com/humamafif/landingpage-desa-ngadireso.git",
-      image: NgadiresoImg,
-    },
+
     {
       title: "KoperasiKita",
       tech_stack: ["Laravel", "Filament"],
