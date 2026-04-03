@@ -10,7 +10,8 @@ import KoperasiImg from "../assets/web/koperasi.webp";
 import PrettierImg from "../assets/other/prettier.webp";
 import ThemeImg from "../assets/other/theme.webp";
 import MathPuzzleImg from "../assets/mobile/mathgame.webp";
-
+import BkpsdmImg from "../assets/web/bkpsdm-bangkalan.webp";
+import MyInvito from "../assets/web/my-invito.webp";
 export const ProjectsData = {
   categories: ["Mobile", "Web", "CLI", "Extension"],
   projects: [
@@ -103,6 +104,34 @@ export const ProjectsData = {
       repo: "",
       image: ManbaulImg,
     },
+    {
+      title: "BKPSDM Bangkalan",
+      tech_stack: ["Laravel", "React", "Tailwind"],
+      type: "freelance",
+      category: "Web",
+      description: [
+        "A full-featured Content Management System (CMS) developed for BKPSDM Bangkalan to streamline digital content publishing and management.",
+        "Supports multi-type content including articles, news, and video with an intuitive admin panel for efficient content operations.",
+        "Built with Laravel and React, focusing on performance, scalability, and a clean user experience for both administrators and public users.",
+      ],
+      link: "https://bkpsdm.bangkalankab.site",
+      repo: "",
+      image: BkpsdmImg,
+    },
+    {
+      title: "My Invito",
+      tech_stack: ["Laravel", "Tailwind"],
+      type: "personal",
+      category: "Web",
+      description: [
+        "A digital invitation platform that allows users to create and share customizable online invitations with ease.",
+        "Provides multiple ready-to-use templates and integrated payment functionality for seamless event management.",
+        "Designed with a focus on simplicity, modern UI, and accessibility to help users quickly launch personalized invitation pages.",
+      ],
+      link: "",
+      repo: "",
+      image: MyInvito,
+    },
 
     {
       title: "KoperasiKita",
@@ -130,20 +159,6 @@ export const ProjectsData = {
       link: "",
       repo: "",
       image: CariJasaImg,
-    },
-    {
-      title: "Mayar Clone",
-      tech_stack: ["Laravel", "React", "Tailwind"],
-      category: "Web",
-      description: [
-        "Final Project at Bootcamp Laravel 12 + React JS.",
-        "Built a web-based e-commerce platform for selling digital products.",
-        "Integrated payment gateway using Xendit for seamless transactions.",
-        "Implemented responsive UI components, product listings, and checkout flow.",
-      ],
-      link: "",
-      repo: "https://github.com/humamafif/mayar-clone.git",
-      image: MayarCloneImg,
     },
     {
       title: "Prettier Config",
