@@ -3,7 +3,6 @@ import SurveyImg from "../assets/mobile/survey.webp";
 import ShowroomImg from "../assets/mobile/showroom.webp";
 import MoviesImg from "../assets/mobile/movies.webp";
 import CariJasaImg from "../assets/web/cari_jasa.webp";
-import MayarCloneImg from "../assets/web/mayar_clone.webp";
 import NgadiresoImg from "../assets/web/ngadireso.webp";
 import ManbaulImg from "../assets/web/manbaul_maarif.webp";
 import KoperasiImg from "../assets/web/koperasi.webp";
