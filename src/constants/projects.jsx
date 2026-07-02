@@ -85,7 +85,7 @@ export const ProjectsData = {
         "Informational landing page for village profile and services.",
         "Optimized layout, typography, and accessibility for content-heavy pages.",
       ],
-      link: "https://www.ngadireso.afifalmahbubi.my.id",
+      link: "https://ngadireso-web.vercel.app",
       repo: "https://github.com/humamafif/landingpage-desa-ngadireso.git",
       image: NgadiresoImg,
     },
