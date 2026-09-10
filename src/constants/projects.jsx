@@ -127,7 +127,7 @@ export const ProjectsData = {
         "Provides multiple ready-to-use templates and integrated payment functionality for seamless event management.",
         "Designed with a focus on simplicity, modern UI, and accessibility to help users quickly launch personalized invitation pages.",
       ],
-      link: "",
+      link: "https://www.myinvito.id",
       repo: "",
       image: MyInvito,
     },
