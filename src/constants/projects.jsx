@@ -120,7 +120,7 @@ export const ProjectsData = {
     {
       title: "My Invito",
       tech_stack: ["Laravel", "Tailwind"],
-      type: "personal",
+      type: "freelance",
       category: "Web",
       description: [
         "A digital invitation platform that allows users to create and share customizable online invitations with ease.",
